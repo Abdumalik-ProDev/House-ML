@@ -1,0 +1,34 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+venv/
+.env
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+
+# Model artifacts
+models/
+*.pkl
+*.ubj
+
+# MLflow tracking
+mlruns/
+
+# Processed data (regeneratable)
+data/processed/*.csv
+data/predictions/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
