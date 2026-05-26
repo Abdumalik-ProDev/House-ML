@@ -44,7 +44,7 @@ Raw Data → Load & Split → Preprocess → Feature Engineering → Train/Tune 
 
 ```bash
 # Clone and enter the repo
-git clone <repo-url> && cd House-ML
+git clone <https://github.com/Abdumalik-ProDev/House-ML.git> && cd House-ML
 
 # Create virtual env and sync dependencies
 uv sync
