@@ -25,6 +25,7 @@ mlruns/
 # Processed data (regeneratable)
 data/processed/*.csv
 data/predictions/
+data/raw/*.csv
 
 # IDE
 .vscode/
