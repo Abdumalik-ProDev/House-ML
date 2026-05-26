@@ -22,11 +22,6 @@ models/
 # MLflow tracking
 mlruns/
 
-# Processed data (regeneratable)
-data/processed/*.csv
-data/predictions/
-data/raw/*.csv
-
 # IDE
 .vscode/
 .idea/
@@ -34,8 +29,9 @@ data/raw/*.csv
 *.swo
 *~
 
-# data files
-data/
-
 # pytest cache
 .pytest_cache/
+
+# data files
+data/*
+data/raw/*
