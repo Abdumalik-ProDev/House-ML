@@ -32,3 +32,9 @@ data/predictions/
 *.swp
 *.swo
 *~
+
+# data files
+data/
+
+# pytest cache
+.pytest_cache/
