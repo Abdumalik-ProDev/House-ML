@@ -98,6 +98,16 @@ curl -X POST http://localhost:8000/predict \
 streamlit run app.py
 ```
 
+### One-Command Launch (API + UI)
+
+Starts both the FastAPI prediction server and Streamlit dashboard in a single terminal:
+
+```bash
+uvicorn src.api.main:app --host 0.0.0.0 --port 8000 & streamlit run app.py
+```
+
+> **Note:** The full data pipeline (steps 1–5 above) must be run at least once before launching so the processed holdout files exist and the model is trained.
+
 ### Monthly Batch Predictions
 
 ```bash
@@ -131,6 +141,16 @@ python tests/data_quality.py
 
 ## Docker
 
+### Docker Compose (recommended)
+
+```bash
+docker compose up --build
+```
+
+This starts both the FastAPI server (port 8000) and Streamlit dashboard (port 8501).
+
+### Build & Run Individually
+
 ```bash
 # Build and run FastAPI
 docker build -t house-ml-api -f Dockerfile .
@@ -145,7 +165,7 @@ docker run -p 8501:8501 -e API_URL=http://localhost:8000/predict house-ml-ui
 
 | Component | Tool |
 |-----------|------|
-| Language | Python 3.14 |
+| Language | Python 3.12 |
 | Package manager | uv |
 | ML model | XGBoost |
 | Hyperparameter tuning | Optuna |

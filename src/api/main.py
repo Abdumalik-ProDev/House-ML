@@ -4,6 +4,7 @@ from typing import List, Dict, Any
 import pandas as pd
 
 from src.inference_pipeline.inference import predict
+from src.batch.run_monthly import run_monthly_predictions
 
 MODEL_PATH = Path("models/xgb_best_model.pkl")
 TRAIN_FE_PATH = Path("data/processed/feature_engineered_train.csv")
@@ -51,9 +52,6 @@ def predict_batch(data: List[dict]):
         resp["actuals"] = preds_df["actual_price"].astype(float).tolist()
 
     return resp
-
-
-from src.batch.run_monthly import run_monthly_predictions
 
 
 @app.post("/run_batch")
